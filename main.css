@@ -1,0 +1,269 @@
+/*Selection*/
+
+    *::selection {
+        
+        color: inherit;
+        background-color: inherit;
+
+    }
+
+/*Page*/
+
+    body {
+
+        margin: 0;
+        padding: 0;
+        background-color: #111;
+        background-image: radial-gradient(circle, #ff6600 5%, #111 70%);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+    }
+
+/*Keys*/
+
+    #keysTitle {
+
+        text-align: center;
+        color: white;
+
+    }
+
+    .keys {
+
+        padding: 0px 2px;
+        border-radius: 5px;
+        background-color: black;
+
+    }
+
+/*Game Screen*/
+
+    .screen {
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 400px;
+        height: 80%;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.5);
+        background-image: url('media/screen/background.png');
+        background-repeat: repeat-y;
+        animation: backgroundMove 50s linear infinite;
+        padding: 0;
+        animation-play-state: paused;
+
+    }
+
+    @keyframes backgroundMove {
+        0% {
+            background-position: bottom;
+        }
+
+
+        100% {
+            background-position: top;
+        }
+    }
+
+/*Options*/
+
+    #optionsContainer {
+
+        margin: 0;
+        margin: 5px 5px 0px 5px;
+
+
+    }
+
+    #pause {
+
+        width: 25px;
+        display: none;
+
+    }
+
+    .options {
+
+        cursor: pointer;
+        height: 25px;
+        margin: 2px 2px 0px 2px;
+
+    }
+
+/*Score*/
+
+    .score {
+
+        color: white;
+        margin: 0px 5px 5px 5px;
+
+    }
+
+/*HUD*/
+
+    .hud {
+
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%,-30%);
+        font-weight: bolder;
+        z-index: 50;
+        color: white;
+        border-radius: 20px;
+        padding: 10px 20px 20px 20px;
+        text-align: center;
+
+    }
+
+/*Settings*/
+
+    #settingsScreen {
+
+        border: solid 1px violet;
+        display: none;
+
+    }
+
+    #settingsScreen > img {
+
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        border-radius: 10%;
+        cursor: pointer;
+        width: 12px;
+
+    }
+    
+    #settingsScreen > h1 {
+
+        color: orange;
+        margin-top: 8px;
+
+    }
+
+    #settingsScreen > h3 {
+
+        margin-bottom: 8px;
+        color: yellow;
+
+    }
+
+/*Play*/
+
+    #playButton {
+
+        color: orange;
+        cursor: pointer;
+
+    }
+
+    #playButton:hover {
+
+        color: green;
+
+
+    }
+
+/*You Lost*/
+
+    #youLostScreen {
+
+        display: none;
+
+    }
+
+    #sadFace {
+
+        width: 25px;
+        height: 25px;
+        display: inline;
+
+    }
+
+    #tryAgain {
+
+        cursor: pointer;
+        color: yellow;
+
+    }
+
+    #tryAgain:hover {
+
+        color: green;
+
+    }
+    
+/*Entities*/
+
+    .entity {
+
+        position: absolute;
+        width: 30px;
+        height: 44.6px;
+        border-radius: 10px;
+
+    }
+
+/*Asteroids*/
+
+    .asteroid {
+
+        position: absolute;
+        border-radius: 50%;
+        padding: 0;
+        animation: 5s linear infinite;
+
+    }
+
+    @keyframes rotateAsteroidLeft {
+
+        from {
+
+            transform: rotate(360deg);
+
+        }
+
+        to {
+
+            transform: rotate(0deg);
+
+        }
+
+    }
+
+    @keyframes rotateAsteroidRight {
+
+        from {
+
+            transform: rotate(360deg);
+
+        }
+
+        to {
+
+            transform: rotate(0deg);
+
+        }
+
+    }
+
+/*Bullets*/
+
+    .bullet {
+
+        position: absolute;
+        width: 5px;
+        height: 15px;
+        border-radius: 50%;
+
+    }
+
+/*End*/
